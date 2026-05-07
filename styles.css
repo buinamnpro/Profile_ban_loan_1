@@ -1,6 +1,8 @@
 :root {
-  --bg: #f6f3eb;
-  --surface: #ffffff;
+  --bg: #ffffff;
+  --section-alt: #ece7de;
+  --panel-bg: #e5dfd6;
+  --surface: #f3f7ff;
   --text: #1f1f1f;
   --muted: #5f5f5f;
   --brand: #35684f;
@@ -36,8 +38,66 @@ html {
   padding: 74px 0;
 }
 
+.sponsor-bar {
+  background: rgba(243, 247, 255, 0.92);
+  border-bottom: 1px solid #d7d1c7;
+  backdrop-filter: blur(8px);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.sponsor-inner {
+  min-height: 74px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 10px 0;
+}
+
+.author-brand {
+  display: flex;
+  align-items: center;
+}
+
+.author-logo {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  box-shadow: 0 8px 20px rgba(11, 34, 58, 0.22);
+}
+
+.sponsor-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #f3fbff 0%, #edf5ff 100%);
+  border: 1px solid #cddceb;
+  box-shadow: 0 8px 18px rgba(23, 72, 129, 0.12);
+}
+
+.sponsor-logo {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  display: block;
+}
+
+.sponsor-badge p {
+  margin: 0;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  color: #1f3778;
+}
+
 .soft {
-  background: #f1ebdf;
+  background: var(--section-alt);
 }
 
 h1,
@@ -83,7 +143,7 @@ p {
 }
 
 .hero .btn {
-  background: #fff;
+  background: #f3f7ff;
   color: #1f3778;
 }
 
@@ -134,7 +194,7 @@ p {
 }
 
 .side-panel.soft .btn {
-  background: #fff;
+  background: #f3f7ff;
   color: #1f3778;
 }
 
@@ -280,7 +340,7 @@ p {
 }
 
 .qb_pro_ct {
-  background: #fff;
+  background: var(--surface);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   overflow: hidden;
@@ -390,7 +450,7 @@ blockquote:hover,
 }
 
 .inspire-section {
-  background: #ececef;
+  background: var(--bg);
 }
 
 .inspire-main .lead {
@@ -454,12 +514,12 @@ blockquote:hover,
 }
 
 .stats-showcase {
-  background: #efefef;
+  background: var(--bg);
   padding-top: 14px;
 }
 
 .stats-panel {
-  background: #e7e7e7;
+  background: var(--panel-bg);
   padding: 30px 24px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -505,7 +565,7 @@ blockquote:hover,
 }
 
 .stats div {
-  background: #fff;
+  background: var(--surface);
   border-radius: 14px;
   padding: 18px;
   text-align: center;
@@ -560,7 +620,7 @@ blockquote:hover,
 }
 
 .product-showcase {
-  background: #ececef;
+  background: var(--bg);
 }
 
 .product-showcase h2,
@@ -607,7 +667,7 @@ blockquote:hover,
 }
 
 .feature-services {
-  background: #ececef;
+  background: #dfeefe;
 }
 
 .feature-services article:hover {
@@ -637,7 +697,7 @@ blockquote:hover,
 }
 
 .pricing-showcase {
-  background: #ececef;
+  background: var(--bg);
 }
 
 .pricing-showcase h2 {
@@ -744,7 +804,7 @@ ul {
 
 .client-logo {
   height: 92px;
-  border: 2px dashed #c9c9c9;
+  border: none;
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -865,7 +925,12 @@ blockquote footer {
 }
 
 .testimonial-showcase {
-  background: #ececef;
+  background: var(--bg);
+}
+
+.client-showcase.soft,
+#faq {
+  background: var(--bg);
 }
 
 .testimonial-layout {
@@ -985,7 +1050,7 @@ blockquote footer {
   padding: 24px 0;
   border-top: 1px solid #ddd3c2;
   text-align: center;
-  background: #efe8da;
+  background: var(--section-alt);
 }
 
 .footer p {
@@ -1110,5 +1175,30 @@ blockquote footer {
 
   .scroll-top-btn {
     justify-self: center;
+  }
+
+  .sponsor-inner {
+    min-height: 66px;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .author-logo {
+    width: 50px;
+    height: 50px;
+  }
+
+  .sponsor-badge {
+    padding: 7px 10px;
+    gap: 8px;
+  }
+
+  .sponsor-logo {
+    width: 28px;
+    height: 28px;
+  }
+
+  .sponsor-badge p {
+    font-size: 0.8rem;
   }
 }
